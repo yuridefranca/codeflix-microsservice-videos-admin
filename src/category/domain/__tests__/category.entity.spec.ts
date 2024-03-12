@@ -1,5 +1,5 @@
-import { EntityValidationError } from '../../shared/domain/validators/class-properties-validator.error';
-import { Uuid } from '../../shared/domain/value-objects';
+import { EntityValidationError } from '../../../shared/domain/validators/class-properties-validator.error';
+import { Uuid } from '../../../shared/domain/value-objects';
 import { Category } from '../category.entity';
 
 describe('Category Entity', () => {
@@ -187,7 +187,7 @@ describe('Category Entity', () => {
         data: 'a'.repeat(256),
         error: new EntityValidationError({})
       }
-    ])('should throw an error if the name property is invalid', ({ data, error }) => { 
+    ])('should throw an error if the name property is invalid', ({ data, error }) => {
       const category = Category.create({ name: 'any_category_name' });
 
       expect(() => category.changeName(data!)).toThrow(error);

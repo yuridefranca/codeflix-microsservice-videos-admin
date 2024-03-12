@@ -1,6 +1,6 @@
 import { IsBoolean, IsNotEmpty, IsOptional, IsString, MaxLength } from 'class-validator';
 import { Category } from './category.entity';
-import { ClassPropertiesValidator } from '../shared/domain/validators/class-properties-validator';
+import { ClassPropertiesValidator } from '../../shared/domain/validators/class-properties-validator';
 
 export class CategoryRules {
   @IsString()
