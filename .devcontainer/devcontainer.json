@@ -5,10 +5,7 @@
 
 	// Update the 'dockerComposeFile' list if you have more compose files or use different names.
 	// The .devcontainer/docker-compose.yml file contains any overrides you need/want to make.
-	"dockerComposeFile": [
-		"../docker-compose.yaml",
-		"docker-compose.yml"
-	],
+	"dockerComposeFile": ["../docker-compose.yaml", "docker-compose.yml"],
 
 	// The 'service' property is the name of the service for the container that VS Code should
 	// use. Update this value and .devcontainer/docker-compose.yml to the real service name.
@@ -27,12 +24,7 @@
 	},
 	"customizations": {
 		"vscode": {
-			"extensions": [
-				"dbaeumer.vscode-eslint",
-				"esbenp.prettier-vscode",
-				"Orta.vscode-jest",
-				"firsttris.vscode-jest-runner"
-			]
+			"extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode", "Orta.vscode-jest"]
 		}
 	}
 
