@@ -12,10 +12,11 @@ describe('In Memory Category Repository', () => {
   });
 
   describe('filter', () => {
-    const entities: any[] = [];
-    for (let index = 0; index < 10; index++) {
-      entities.push(new Category({ name: `Category ${index}` }));
-    }
+    const entities: any[] = Category
+      .fake()
+      .create(10)
+      .withName((i: number) => `Category ${i}`)
+      .build() as Category[];
 
     it.each([
       {
@@ -57,11 +58,12 @@ describe('In Memory Category Repository', () => {
   });
 
   describe('sort', () => {
-    const entities: any[] = [];
-    for (let index = 0; index < 10; index++) {
-      const baseDate = new Date('2024-01-01');
-      entities.push(new Category({ createdAt: new Date(baseDate.getTime() + 100 * index), name: `Category ${index}` }));
-    }
+    const entities: any[] = Category
+      .fake()
+      .create(10)
+      .withCreatedAt((i: number) => new Date(new Date('2024-01-01').getTime() + 100 * i))
+      .withName((i: number) => `Category ${i}`)
+      .build() as Category[];
 
     it.each([
       {

@@ -1,6 +1,7 @@
 import { Entity, ValueObject } from '../../shared/domain';
 import { EntityValidationError } from '../../shared/domain/validators/class-properties-validator.error';
 import { Uuid } from '../../shared/domain/value-objects';
+import { CategoryFakerBuilder } from './category-faker-builder';
 import { CategoryValidatorFactory } from './category.validator';
 
 type CategoryConstructorProps = {
@@ -47,6 +48,10 @@ export class Category extends Entity {
     if (!isValid) {
       throw new EntityValidationError(validator.errors!);
     }
+  }
+
+  static fake() {
+    return CategoryFakerBuilder;
   }
 
   activate(): void {
