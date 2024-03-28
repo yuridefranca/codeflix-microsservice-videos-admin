@@ -24,7 +24,15 @@
 	},
 	"customizations": {
 		"vscode": {
-			"extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode", "Orta.vscode-jest"]
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"Orta.vscode-jest",
+				"ms-vscode.vscode-typescript-next",
+				"natqe.reload",
+				"vivaxy.vscode-conventional-commits",
+				"motivesoft.vscode-uuid-generator"
+			]
 		}
 	}
 
