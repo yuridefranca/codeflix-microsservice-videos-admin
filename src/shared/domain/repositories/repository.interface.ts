@@ -20,7 +20,7 @@ export interface SearchableRepository<
   RepositorySearchParams = SearchParams<Filter>,
   RepositorySearchResult = SearchResult
 >
-  extends Repository<Entity, ValueObject> {
+  extends Repository<RepositoryEntity, RepositoryEntityId> {
   sortableFields: string[];
 
   search(request: RepositorySearchParams): Promise<RepositorySearchResult>;
